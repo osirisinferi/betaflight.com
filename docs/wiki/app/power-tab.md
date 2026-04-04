@@ -68,6 +68,14 @@ Scale: 110 = 10:1 voltage divider (10k:1k ohm resistors)
 Divider: 10 = sets the direct resistor to resistor ratio  
 Multiplier: 1 = this is to fine-tune the outcome of the calculation, a value of 1 is "no correction"
 
+### Offset Value
+
+If the voltage meter is measuring the voltage after e.g. a heavy reverse polarity protection diode, this can cause a certain voltage drop. Due to this, the voltage measured by the FC is lower than the actual voltage of the battery. The offset value compensates for this by adding the configured value to the measured voltage. The offset value is in centivolts. E.g. if you determined there is a difference of 0.45 volt between the voltage measured by the FC in Betaflight and the voltage measured by a multimeter on the battery, you would enter an offset value of 45 in the configurator.
+
+:::note
+Make sure you measure the difference between the voltage meter and the actual battery voltage in flight realistic circumstances (e.g., with the VTX enabled), as the voltage drop over diodes increases with a higher current through the diode.
+:::
+
 ## Amperage Meter
 
 Settings for the amperage meter to measure the current draw correctly, using this formula:
